@@ -46,6 +46,9 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log('都市名' + data.name);
-console.log('最高気温' + data.main.temp_max);
-console.log('最低気温' + data.main.temp_min);
+let a = document.querySelector('p#name');
+a.textContent = "都市名 : " + data.name;;
+let b = document.querySelector('p#max');
+b.textContent = "最高気温 : " + data.main.temp_max;;
+let c = document.querySelector('p#min');
+c.textContent = "最低気温 : " + data.main.temp_min;;
