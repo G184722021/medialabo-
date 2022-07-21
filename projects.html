@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
   <link rel="stylesheet" href="project.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="project.js" defer></script>
   <head>
     <meta charset="utf-8">
     <title>Projects</title>
   </head>
 
   <body>
-    <!-- put navigation menu just below here -->
+    <h1>世界の天気</h1>
+    <select name="city" id="city-select">
+      <option value="" selected>都市名を選択してください</option>
+      <option value="Cairo"> カイロ （エジプト）</option>
+      <option value="Moscow"> モスクワ （ロシア）</option>
+      <option value="Johannesburg"> ヨハネスブルク （南アフリカ）</option>
+      <option value="Beijing"> 北京 （中華人民共和国）</option>
+      <option value="Tokyo"> 東京 （日本）</option>
+      <option value="Singapore"> シンガポール</option>
+      <option value="Sydney"> シドニー （オーストラリア）</option>
+      <option value="London"> ロンドン （イギリス）</option>
+      <option value="Paris"> パリ （フランス）</option>
+      <option value="Rio de Janeiro"> リオデジャネイロ （ブラジル）</option>
+      <option value="New York"> ニューヨーク （アメリカ合衆国）</option>
+      <option value="Los Angeles"> ロサンゼルス （アメリカ合衆国）</option>
+    </select>
 
-    <h1>My projects</h1>
-
-    <p>Welcome to my project page, showing what exciting things I am currently doing.</p>
-
-    <p>都市名：北京, 最高気温：35℃, 最低気温：15度</p>
-    <script src="weather.js" defer></script>
-    <p id="name"></p>
-    <p id="max"></p>
-    <p id="min"></p>
+    <button id="print">検索</button>
   </body>
 </html>
