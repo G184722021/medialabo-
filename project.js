@@ -1,12 +1,13 @@
-let b = document.querySelector('#print');
+let b = document.querySelector('#sendRequest');
 b.addEventListener('click', sendRequest);
 
 
 let id = 360630;
 
-var select = document.getElementById('city-select');
+var select = document.getElementById('city');
+
 select.onchange = function(){
-    alert(this.value);
+  alert(this.value);
 }
 
 function sendRequest() {
@@ -36,5 +37,6 @@ function showError(err) {
 
 // 通信の最後にいつも実行する処理
 function finish() {
-	console.log('Ajax 通信が終わりました');
+	console.log(selected_value);
+	console.log('通信が終わりました');
 }
