@@ -1,5 +1,8 @@
-var select = document.getElementById('selectMonth');
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
 
-select.onchange = function(){
-  alert(this.value);
+function sendRequest(){
+  var age = document.getElementById("age");
+
+  console.log(age.value); // 2
 }
