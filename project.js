@@ -1,9 +1,18 @@
 let b = document.querySelector('#sendRequest');
-b.addEventListener('click', sendRequest);
-let c = document.querySelector('#reset');
-c.addEventListener('click', reset);
+b.addEventListener('mousedown', sendRequest);
+let d = document.querySelector('#sendRequest');
+d.addEventListener('mouseup', sendRequest2);
 
 function sendRequest() {
+	let p = document.querySelector('p');
+	p.remove()
+	p = document.querySelector('p');
+	p.remove()
+	p = document.querySelector('p');
+	p.remove()
+}
+
+function sendRequest2() {
 	var city = document.getElementById("city");
 	let id = city.value;
 
@@ -24,10 +33,16 @@ function showResult(resp) {
 		data = JSON.parse(data);
 	}*/
 	
-	let h1a = document.querySelector('h1#a');
+	let h1a = document.querySelector('h2#a');
 	let p;
 	p = document.createElement('p');
-	p.textContent = "都市名 : " + data.name + "   最高気温 : " + data.main.temp_max + "   最低気温 : " + data.main.temp_min;
+	p.textContent = "都市名 : " + data.name;
+	h1a.insertAdjacentElement('beforeend', p);
+	p = document.createElement('p');
+	p.textContent ="最高気温 : " + data.main.temp_max;
+	h1a.insertAdjacentElement('beforeend', p);
+	p = document.createElement('p');
+	p.textContent ="最低気温 : " + data.main.temp_min ;
 	h1a.insertAdjacentElement('beforeend', p);
 
 }
@@ -38,9 +53,4 @@ function showError(err) {
 // 通信の最後にいつも実行する処理
 function finish() {
 	console.log('通信が終わりました');
-}
-
-function reset() {
-	let p = document.querySelector('p');
-	p.remove()
 }
