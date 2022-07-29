@@ -29,7 +29,7 @@ function greeting() {
     let result;
 
     if (kaisu < 3){
-        if (kotae === yoso){
+        if (kotae == yoso){
             result = "正解です．おめでとう!";
             kaisu = 3;
         } 
