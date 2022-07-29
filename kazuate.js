@@ -31,7 +31,7 @@ function greeting() {
     if (kaisu < 3){
         if (kotae == yoso){
             result = "正解です．おめでとう!";
-            kaisu = 3;
+            //kaisu = 3;
         } 
         if (kotae > yoso){
             result = "まちがい．答えはもっと大きいですよ";
