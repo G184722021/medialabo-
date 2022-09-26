@@ -5,11 +5,13 @@ d.addEventListener('mouseup', sendRequest2);
 
 function sendRequest() {
 	let p = document.querySelector('p');
-	p.remove()
-	p = document.querySelector('p');
-	p.remove()
-	p = document.querySelector('p');
-	p.remove()
+	if (p != null){
+		p.remove()
+		p = document.querySelector('p');
+		p.remove()
+		p = document.querySelector('p');
+		p.remove()	
+	}
 }
 
 function sendRequest2() {
@@ -28,7 +30,7 @@ function sendRequest2() {
 		p = document.createElement('p');
 		p.textContent = "";
 		h1a.insertAdjacentElement('beforeend', p);
-	}
+	}else{
 
 	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + id + '.json';
 
@@ -36,7 +38,9 @@ function sendRequest2() {
 		.then(showResult)
 		.catch(showError)
 		.then(finish);
+	}
 }
+
 
 function showResult(resp) {
 	
