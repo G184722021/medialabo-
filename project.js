@@ -16,6 +16,20 @@ function sendRequest2() {
 	var city = document.getElementById("city");
 	let id = city.value;
 
+	if(id == 1){
+		let h1a = document.querySelector('h2#a');
+		let p;
+		p = document.createElement('p');
+		p.textContent = "";
+		h1a.insertAdjacentElement('beforeend', p);
+		p = document.createElement('p');
+		p.textContent = "";
+		h1a.insertAdjacentElement('beforeend', p);
+		p = document.createElement('p');
+		p.textContent = "";
+		h1a.insertAdjacentElement('beforeend', p);
+	}
+
 	let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + id + '.json';
 
 	axios.get(url)
@@ -25,13 +39,8 @@ function sendRequest2() {
 }
 
 function showResult(resp) {
-	// サーバから送られてきたデータを出力
+	
 	let data = resp.data;
-
-	// data が文字列型なら，オブジェクトに変換する
-	/*if (typeof data === 'string') {
-		data = JSON.parse(data);
-	}*/
 	
 	let h1a = document.querySelector('h2#a');
 	let p;
